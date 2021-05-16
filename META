@@ -1,0 +1,13 @@
+user:
+ [ok] - receiver and print
+ [ok] - send to server
+  - login msg("log&user&pass")[ok]
+  - global msg("hello")[ok]
+  - private msg("/private user msg")
+  - to friends msg("/f msg")
+  - invite msg("/invite user")
+  - accept msg("/accept user")
+server:
+ - read msgs and process...
+  - close invalid logins/registers
+  - send global/private msgs
